@@ -524,8 +524,8 @@ function group(array, keySelector, valueSelector) {
     const key = keySelector(item);
     const value = valueSelector(item);
     if (!result.has(key)) {
+      result.set(key, []);
       result.get(key).push(value);
-      result[key] = value;
     } else {
       result.get(key).push(value);
     }
