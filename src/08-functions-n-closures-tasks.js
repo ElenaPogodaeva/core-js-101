@@ -90,7 +90,7 @@ function getPolynom(...args) {
  */
 function memoize(func) {
   const memory = new Map();
-  return function (arg) {
+  return (arg) => {
     if (memory.has(arg)) {
       return memory.get(arg);
     }
@@ -173,9 +173,7 @@ function logger(/* func, logFunc */) {
  *   partialUsingArguments(fn, 'a','b','c','d')() => 'abcd'
  */
 function partialUsingArguments(fn, ...args1) {
-  return function (...args) {
-    return fn(...args1, ...args);
-  };
+  return (...args) => fn(...args1, ...args);
 }
 
 
