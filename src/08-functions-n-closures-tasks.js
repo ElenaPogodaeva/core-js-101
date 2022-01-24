@@ -94,9 +94,9 @@ function memoize(func) {
     if (memory.has(arg)) {
       return memory.get(arg);
     }
-    const result = func(arg);
-    memory.set(arg, result);
-    return result;
+    // const result = func(arg);
+    memory.set(arg, func(arg));
+    return memory.get(arg);
   };
 }
 
