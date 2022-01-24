@@ -77,7 +77,6 @@ function isLeapYear(date) {
 function timeSpanToString(startDate, endDate) {
   const time = endDate - startDate;
   const h = Math.trunc((time / 3600000) % 100).toString().padStart(2, '0');
-  console.log(time / 3600000, (time / 3600000) % 100);
   const m = Math.trunc((time / 60000) % 60).toString().padStart(2, '0');
   const s = Math.trunc((time / 1000) % 60).toString().padStart(2, '0');
   const ms = Math.trunc(time % 1000).toString().padStart(3, '0');
